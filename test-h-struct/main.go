@@ -8,9 +8,19 @@ type Person struct {
 	old    int
 }
 
+func (p *Person) set(name string, family string, old int) {
+	p.name = name
+	p.family = family
+	p.old = old
+}
+
 func main() {
 
-	mahdi := Person{name: "mahmoud", family: "homeyli", old: 31}
+	mahdi := Person{
+		name:   "mahmoud",
+		family: "homeyli",
+		old:    31,
+	}
 
 	//fmt.Println(mahdi)
 
@@ -20,6 +30,11 @@ func main() {
 	me.name = "mahdi"
 	me.family = "homeyli"
 	me.old = 31
+
+	var sareh Person
+	sareh.set("sareh", "homeyli", 0)
+
+	fmt.Println(sareh)
 
 	//fmt.Println(me)
 

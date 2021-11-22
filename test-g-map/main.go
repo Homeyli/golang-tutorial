@@ -13,8 +13,18 @@ func main() {
 
 	fmt.Println(informations, informations["name"])
 
+	// ----------------------------------------------------------
 	numbers := map[string]int{"old": 31, "brith": 1990}
 
 	fmt.Println(numbers)
+
+	// --------------------------------------------------------------
+
+	var person map[string]interface{} = make(map[string]interface{})
+
+	person["name"] = "mahdi"
+	person["birth"] = 1990
+
+	fmt.Println(person)
 
 }
